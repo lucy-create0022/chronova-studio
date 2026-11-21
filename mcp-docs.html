@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>Chronova History AI - MCP Documentation</title>
+
+<style>
+body {
+  background: #101827;
+  color: #e8edf5;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: auto;
+  padding: 35px 20px;
+}
+h1, h2 { color: #e9bf70; }
+a { color: #e9bf70; }
+code, pre {
+  background: #202d42;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+pre { white-space: pre-wrap; }
+</style>
+</head>
+
+<body>
+
+<h1>Chronova History AI</h1>
+<p>Official MCP Server Documentation</p>
+
+<h2>Overview</h2>
+<p>
+Chronova History AI is an experimental
+Model Context Protocol (MCP) connector
+developed by Chronova Studio.
+</p>
+
+<p>
+The connector provides structured
+historical storytelling templates
+for educational short-form videos.
+</p>
+
+<h2>MCP Endpoint</h2>
+<pre>https://chronova-history-mcp.haimintol02.workers.dev/mcp</pre>
+
+<h2>Connection</h2>
+<p>
+Protocol: MCP over HTTP (JSON-RPC 2.0).
+</p>
+<p>
+Transport: Stateless HTTP, JSON responses.
+</p>
+<p>
+Authentication: Not currently required.
+</p>
+
+<h2>Available Tools</h2>
+
+<h3>1. create_history_short</h3>
+<p>
+Creates a structured outline for an
+animated historical YouTube Short.
+</p>
+
+<p>Parameters:</p>
+<ul>
+<li>topic: Required string.</li>
+<li>duration: Optional integer, 15-180 seconds.</li>
+<li>language: Optional string, default English.</li>
+</ul>
+
+<p>Example MCP request:</p>
+<pre>{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "method": "tools/call",
+  "params": {
+    "name": "create_history_short",
+    "arguments": {
+      "topic": "How Napoleon Sold Louisiana",
+      "duration": 60,
+      "language": "English"
+    }
+  }
+}</pre>
+
+<h3>2. get_studio_info</h3>
+<p>
+Returns information about Chronova
+Studio and its current capabilities.
+</p>
+
+<h2>Access Requirements</h2>
+<ul>
+<li>No account currently required.</li>
+<li>No API key currently required.</li>
+<li>No paid subscription required.</li>
+<li>Usage subject to Cloudflare Workers limits.</li>
+</ul>
+
+<h2>Current Limitations</h2>
+<p>
+This is an experimental connector.
+It provides structured templates,
+not finished videos or verified
+historical research.
+</p>
+
+<p>
+It does not currently generate MP4
+files, narration audio, or AI images.
+</p>
+
+<p>
+Streaming SSE and user authentication
+are not currently implemented.
+Compatibility with all MCP clients
+is not guaranteed.
+</p>
+
+<h2>Security</h2>
+<p>
+The endpoint is intended for
+testing. Public production use
+requires further security review.
+</p>
+
+<h2>Support</h2>
+<p>
+Contact: linein409@gmail.com
+</p>
+
+<p>
+<a href="index.html">Back to Chronova Studio</a>
+</p>
+
+</body>
+</html>
