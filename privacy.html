@@ -20,38 +20,43 @@ h1, h2, a { color: #e9bf70; }
 </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
-<p>Last updated: November 20, 2026</p>
+<main>
+  <header>
+    <p>Chronova Studio · Chronova History AI</p>
+    <h1>Privacy Policy</h1>
+    <p>Last updated <time datetime="2026-11-22">22 November 2026</time></p>
+  </header>
+  <p>Chronova Studio is an independent creative project focused on history and education. This policy covers the Chronova public website, the Chronova History AI connector on Muse, and messages you send to our support address.</p>
 
-<p>Chronova Studio is an independent
-creative project focused on animated
-historical and educational content.</p>
+  <h2>What the connector receives</h2>
+  <p>When you use a tool, Muse sends a request to our connector on Cloudflare Workers. The request includes a method, a request identifier when applicable, and any arguments for that tool.</p>
+  <ul>
+    <li><code>create_history_short</code> uses the historical topic you enter and, if provided, a duration and language label. The tool returns a four-part text outline to Muse. The outline includes the supplied topic, a duration, and a language label. Scene instructions are in English. Please use historical subject matter and leave out private details about yourself or other people.</li>
+    <li><code>get_studio_info</code> returns a fixed description of Chronova Studio and its capabilities. It requires no user input.</li>
+  </ul>
+  <p>The tools work without a Chronova account, password or API key. The Worker builds the response in memory. Its application code has no database for topics or outlines, makes no calls to external AI providers, and does not write the request body or the outline to an application log.</p>
 
-<h2>Information We Collect</h2>
-<p>Visitors may contact us voluntarily
-by email. We may process information
-provided in those communications.</p>
+  <h2>Operational logs and retention</h2>
+  <p>We use Cloudflare Workers Logs to check whether the connector responds and to diagnose errors. Invocation logging is enabled. Log entries can include the request time, HTTP method and URL, response status, request identifiers, network and user-agent information, and the Cloudflare location that handled the request. The network address can belong to the service making the request on your behalf. Keep personal information out of request URLs.</p>
+  <p>For Workers Free, Cloudflare documents a three-day retention period for Workers Logs through 30 November 2026. Its published Free Observability plan lists seven days from 1 December 2026. These periods describe logs available in Cloudflare’s logging service. They do not set a deletion deadline for support email, copies held by Muse, or any separate provider backup. The Worker has no configured external log export destination. The developer keeps no separate exports, screenshots or personal backups of Muse users’ personal data.</p>
 
-<h2>How We Use Information</h2>
-<p>We use information to respond to
-inquiries, provide support, and
-maintain our services.</p>
+  <h2>Service providers and international processing</h2>
+  <p>One independent developer administers Chronova from Indonesia and has no separate servers or personal backups for the connector. Muse sends the tool request and receives the result. Cloudflare, Inc. hosts the Worker and its operational logs. The Worker uses Cloudflare’s default placement. Requests for this connector have been handled in the United States and the Netherlands. Cloudflare’s Data Localization Suite is not enabled on this account. Requests can be processed in other countries, and Cloudflare may store invocation logs in its core data centers worldwide. A request’s processing location does not establish where its log is stored.</p>
+  <p>For covered personal data, Cloudflare incorporates its Customer Data Processing Addendum into its self-serve terms. The addendum provides safeguards depending on the transfer, including Standard Contractual Clauses for applicable restricted European transfers and the Data Privacy Framework for qualifying US transfers.</p>
+  <p>GitHub Pages hosts the public Chronova website and can process technical information when you visit it. The connector processes tool requests on Cloudflare. If you email us, our email provider handles your address, your message and anything you choose to attach so we can respond.</p>
 
-<h2>Third-Party Services</h2>
-<p>Our website is hosted using GitHub
-Pages. Third-party services may
-process technical information under
-their own privacy policies.</p>
+  <h2>Request access or deletion</h2>
+  <p>The developer monitors the privacy inbox. Email <a href="mailto:m11510n01@gmail.com">m11510n01@gmail.com</a> to ask about personal data Chronova holds or request access or deletion. Tell us whether your request concerns a support email or a connector call. For a call, an approximate time, time zone and tool name can help us locate the event. Please leave out passwords, ID documents and the original text of any sensitive prompt.</p>
+  <p>We can review a request against records we can identify and may need to verify that they relate to you. The connector has no self-service deletion tool or user-account history. Some technical records identify the calling service and cannot be matched to a particular person. Log expiry is separate from a request to delete a record. Chronova currently has no verified way to erase an individual Workers Logs entry on demand. For a copy of a conversation or outline kept in your Muse account, direct your request to Muse.</p>
 
-<h2>Data Requests</h2>
-<p>You may contact us to request
-information about personal data
-we hold or request its deletion,
-subject to applicable requirements.</p>
-
-<h2>Contact</h2>
-<p>Support email: m11510n01@gmail.com</p>
-
-<p><a href="index.html">Back to Home</a></p>
+  <h2>Provider references</h2>
+  <ul>
+    <li><a href="https://developers.cloudflare.com/workers/observability/logs/workers-logs/">Cloudflare Workers Logs, including data location and retention</a></li>
+    <li><a href="https://developers.cloudflare.com/observability/pricing/">Cloudflare Observability plans from 1 December 2026</a></li>
+    <li><a href="https://www.cloudflare.com/terms/">Cloudflare Self-Serve Subscription Agreement, section 6.1</a></li>
+    <li><a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Cloudflare Customer Data Processing Addendum, sections 3 and 6</a></li>
+  </ul>
+  <p><a href="index.html">Back to Home</a></p>
+</main>
 </body>
 </html>
